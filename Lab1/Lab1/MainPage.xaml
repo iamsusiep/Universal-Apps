@@ -8,6 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width ="1"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="ACME Sales Corp" Margin="10,47.759,0,243.233" SelectionChanged="textBlock_SelectionChanged" FontSize="48" Width="417" Grid.RowSpan="2" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.Column ="3">
+            <TextBlock.RenderTransform>
+                <CompositeTransform SkewY="-0.066" TranslateY="0.001"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="First Name:" VerticalAlignment="Top" Margin="10,8,0,0" Grid.Row="1" Grid.Column ="1"/>
+        <TextBlock x:Name="textBlock1_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Last Name:" VerticalAlignment="Top" Margin="10,58,0,0" Grid.Row="1" Grid.Column ="1"/>
+        <TextBlock x:Name="textBlock1_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Margin="10,108,0,0" Grid.Row="1" Grid.Column ="1"/>
+        <Button x:Name="button" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150,150,0,0" Grid.Row="1" Grid.Column ="2"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="150,58,0,0" Grid.Row="1" Grid.Column ="2" Width="359"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="150,8,0,0" Grid.Row="1" Grid.Column ="2" Width="359" TextChanged="textBox_Copy_TextChanged"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Margin="150,108,0,0" Grid.Row="1" Grid.Column ="2" Width="359"/>
 
     </Grid>
 </Page>

@@ -26,5 +26,15 @@ namespace Lab1
         {
             this.InitializeComponent();
         }
+
+        private void textBlock_SelectionChanged(System.Object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void textBox_Copy_TextChanged(System.Object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
