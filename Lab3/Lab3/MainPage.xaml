@@ -7,7 +7,50 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+            <RowDefinition Height ="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Title 1" VerticalAlignment="Top" Grid.Row ="0" SelectionChanged="textBlock_SelectionChanged" FontWeight="Bold" Margin ="10,10,0,0" FontSize="20"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Title 2" VerticalAlignment="Top" Grid.Row="1" FontWeight="Bold" Margin ="10,10,0,0" FontSize="20"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" TextWrapping="Wrap" Text ="Title 3" VerticalAlignment="Top" Grid.Row="2" FontWeight="Bold" Margin ="10,10,0,0" FontSize="20"/>
+        <StackPanel Orientation ="Vertical" Grid.Row ="0">
+            <TextBlock x:Name="textBlock3" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="42,53,0,0" SelectionChanged="textBlock3_SelectionChanged" Width="400">
+            <Span Foreground="Black">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus, mi nec fermentum congue, turpis nibh porttitor ex, sed commodo neque eros non libero. Donec mauris felis, malesuada nec consectetur et, pharetra in ante. Praesent nec hendrerit purus. Ut vel nunc id nisl volutpat porta. Cras in convallis ipsum. Integer id sollicitudin ex. Ut sed iaculis nisl. "/>
+            </Span>
+            </TextBlock>
+            <StackPanel Orientation ="Horizontal">
+                <Rectangle Fill="Green" Height="30" Width ="100"  Margin = "100,0,0,0" HorizontalAlignment="Center" />
+                <Rectangle Fill ="Black" Height ="30" Width ="100"  Stroke="Black" Margin ="0,0,0,0"/>
+                <Rectangle Fill ="Red" Height ="30" Width ="100"  Stroke="Red" Margin ="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Row ="1">
+            <TextBlock x:Name="textBlock4" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,53,0,0" SelectionChanged="textBlock3_SelectionChanged" Width="400">
+            <Span Foreground="Black">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus, mi nec fermentum congue, turpis nibh porttitor ex, sed commodo neque eros non libero. Donec mauris felis, malesuada nec consectetur et, pharetra in ante. Praesent nec hendrerit purus. Ut vel nunc id nisl volutpat porta. Cras in convallis ipsum. Integer id sollicitudin ex. Ut sed iaculis nisl. "/>
+            </Span>
+            </TextBlock>
+            <StackPanel Orientation ="Horizontal">
+                <Rectangle Fill="Red" Height="30" Width ="100"  Margin = "100,0,0,0" HorizontalAlignment="Center" />
+                <Rectangle Fill ="Black" Height ="30" Width ="100"  Stroke="Black" Margin ="0,0,0,0"/>
+                <Rectangle Fill ="Blue" Height ="30" Width ="100"  Margin ="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation ="Vertical" Grid.Row ="2">
+            <TextBlock x:Name="textBlock5" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,53,0,0" SelectionChanged="textBlock3_SelectionChanged" Width="400">
+            <Span Foreground="Black">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut luctus, mi nec fermentum congue, turpis nibh porttitor ex, sed commodo neque eros non libero. Donec mauris felis, malesuada nec consectetur et, pharetra in ante. Praesent nec hendrerit purus. Ut vel nunc id nisl volutpat porta. Cras in convallis ipsum. Integer id sollicitudin ex. Ut sed iaculis nisl. "/>
+            </Span>
+            </TextBlock>
+            <StackPanel Orientation ="Horizontal">
+                <Rectangle Fill="Blue" Height="30" Width ="100"  Margin = "100,0,0,0" HorizontalAlignment="Center" />
+                <Rectangle Fill ="Black" Height ="30" Width ="100"  Stroke="Black" Margin ="0,0,0,0"/>
+                <Rectangle Fill ="Yellow" Height ="30" Width ="100"  Margin ="0,0,0,0"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

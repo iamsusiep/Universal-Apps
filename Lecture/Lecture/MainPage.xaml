@@ -6,79 +6,26 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <!--<StackPanel Background="White">
-        <TextBlock>First</TextBlock>
-        <TextBlock>Second</TextBlock>
-        <TextBlock>Third</TextBlock>
-        <TextBlock>Fourth</TextBlock>
-        <StackPanel Orientation="Horizontal">
-            <TextBlock>Fifth</TextBlock>
-            <TextBlock Text="Sixth"></TextBlock>
-            <Button>Seventh</Button>
-            </StackPanel>
-    </StackPanel>
-</Page>-->
-    <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-        <Rectangle Width="200" Height="200" Fill="Bisque"/>
-        <StackPanel Orientation="Vertical">
-        <StackPanel Orientation="Horizontal">
-            <Rectangle Width="100" Height="100" Fill="Azure">
-                    <StackPanel Orientation ="Vertical">
-                        <Rectangle Width="100" Height="50" Fill="RosyBrown"/>
-                        <Rectangle Width="100"
-                    </StackPanel>
-            </Rectangle>
-        </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Rectangle Width="100" Height="100" Fill="Tomato">
-                </Rectangle>
-            
-            </StackPanel>
-        </StackPanel>
-    </StackPanel>
-</Page>
-<!--  <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-        <Rectangle Width="200" Height="200" Fill="Bisque"/>
-        <StackPanel Orientation ="Horizontal">
-            <Rectangle Width="100" Height="100" Fill="Azure"/>
-        </StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Rectangle Width="100" Height="100" Fill="Tomato"/>
-        </StackPanel>
-    </StackPanel>
-</Page>
-    <Button x:Name="Button1" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10.333,10,0" Click="Button1_Click" Grid.Row="1"/>
-    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height= "*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/> 
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        
-        <Rectangle Fill ="Red" Grid.Row="0" Height="40" Width="40"/>
-        <Rectangle Fill ="Green" Grid.Row="1" Height="40" Width="40"/>
-        <Rectangle Fill ="Blue" Grid.Row="2" Height="40" Width="40"/>
+        <RelativePanel MinHeight="100" Grid.Row="1">
+            <Rectangle Name="RedRectangle" Fill="Red" Width="100" Height ="100" RelativePanel.AlignRightWithPanel="True"/>
+            <Rectangle Name="BlueRectangle" Fill="Blue" Width="50" Height="50" RelativePanel.LeftOf="RedRectangle"/>
+            <Rectangle Name="GreenRectangle" Fill="Green" Width="50" Height="50"
+                       RelativePanel.AlignVerticalCenterWith="RedRectangle"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <Rectangle Name="PurpleRectangle" Fill="Purple" MinWidth="50" MinHeight="50"
+                       RelativePanel.Below="RedRectangle"
+                       RelativePanel.AlignRightWith="RedRectangle"
+                       RelativePanel.AlignLeftWith="GreenRectangle"/>
+            <Rectangle Name="YellowRectangle" Fill="Yellow" MinWidth="50" MinHeight="50"
+                       RelativePanel.AlignBottomWithPanel="True"
+                       RelativePanel.AlignBottomWith="PurpleRectangle"/>
 
-        <Rectangle Fill ="Pink" Grid.Row ="0" Grid.Column ="1" Height="40" Width="40"/>
-        <Rectangle Fill ="LightGreen" Grid.Row ="0" Grid.Column ="2" Height="40" Width="40"/>
-        <Rectangle Fill ="Violet" Grid.Row ="1" Grid.Column ="1" Height="40" Width="40"/>
-        <Rectangle Fill ="Turquoise" Grid.Row ="2" Grid.Column ="1" Height="70" Width="40"/>
-        <Rectangle Fill ="Yellow" Grid.Row ="1" Grid.Column ="2" Height="50" Width="40"/>
-        <Rectangle Fill ="Orange" Grid.Row ="2" Grid.Column ="2" Height="80" Width="40"/>
-
-        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="Button1" Content="Button" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10.333,10,0" Click="Button1_Click" Grid.Row="1"/>--><!--
-        <TextBlock x:Name="TextBlock1" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Click the button!" VerticalAlignment="Top" Margin="106,140,0,0" FontSize="48"/>
-        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,598,0,0" Height="42" Width="340"/>
-        <Button x:Name="WHAT" Content="lol" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="168,413,0,0" FontSize="30" Click="WHAT_Click"/>
-        <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
-        <Grid x:Name="grid" HorizontalAlignment="Left" Height="100" Margin="168,93,0,0" Grid.Row="3" VerticalAlignment="Top" Width="100" Grid.RowSpan="3" Grid.Column="3" Grid.ColumnSpan="3"/>
-    -->
-        <!--</Grid>
-</Page>-->
+        </RelativePanel>
+    </Grid>
+</Page>
