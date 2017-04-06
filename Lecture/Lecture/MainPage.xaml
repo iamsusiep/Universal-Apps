@@ -25,7 +25,7 @@
             <Rectangle Name="YellowRectangle" Fill="Yellow" MinWidth="50" MinHeight="50"
                        RelativePanel.AlignBottomWithPanel="True"
                        RelativePanel.AlignBottomWith="PurpleRectangle"/>
-
+<!--sdaf-->
         </RelativePanel>
     </Grid>
 </Page>
