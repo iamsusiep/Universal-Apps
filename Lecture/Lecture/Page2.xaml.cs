@@ -26,5 +26,12 @@ namespace Lecture
         {
             this.InitializeComponent();
         }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            string name = (string)e.Parameter;
+
+            GreetingTextBlock.Text = $"Hello, {name}!";
+
+        }
     }
 }
