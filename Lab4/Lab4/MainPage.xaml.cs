@@ -54,5 +54,13 @@ namespace Lab4
                 InnerFrame.GoBack();
             }
         }
+
+        private void InnerFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            if (InnerFrame.CanGoBack)
+            {
+                InnerFrame.GoBack();
+            }
+        }
     }
 }
