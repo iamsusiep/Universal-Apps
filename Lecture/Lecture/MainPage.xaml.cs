@@ -27,27 +27,21 @@ namespace Lecture
             this.InitializeComponent();
             //InnerFrame.Navigate(typeof(Page1));
         }
-        private void HamburgerButton_Click(Object sender, RoutedEventArgs e)
-        {
-            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
-        }
-        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (ShareListBoxItem.IsSelected)
-            {
-                ResultTextBlock.Text = "Share";
-            }
-            else if (FavoritesListBoxItem.IsSelected)
-            {
-                ResultTextBlock.Text = "Favorites";
-            }
-        }
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        //private void HamburgerButton_Click(Object sender, RoutedEventArgs e)
+        //{
+        //    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        //}
+        //private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+        //    if (ShareListBoxItem.IsSelected)
+        //    {
+        //        ResultTextBlock.Text = "Share";
+        //    }
+        //    else if (FavoritesListBoxItem.IsSelected)
+        //    {
+        //        ResultTextBlock.Text = "Favorites";
+        //    }
+        //}
 
         //private void MyCheckBox_Tapped(object sender, TappedRoutedEventArgs e)
         //{

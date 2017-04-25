@@ -62,5 +62,10 @@ namespace Lab4
                 InnerFrame.GoBack();
             }
         }
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
