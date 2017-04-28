@@ -27,6 +27,16 @@ namespace Lecture
             this.InitializeComponent();
             //InnerFrame.Navigate(typeof(Page1));
         }
+
+        private void MyCalendarView_SelectionDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
+        {
+            var selectedDates = sender.SelectedDates
+            .Select(p => p.Date.Month.ToString() + "/" + p.Date.Day.ToString())
+            .ToArray();
+
+            var values = string.Join(",", selectedDates);
+            CalendarViewResultTextBlock.Text = values;
+        }
         //private void HamburgerButton_Click(Object sender, RoutedEventArgs e)
         //{
         //    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;

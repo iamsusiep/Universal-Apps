@@ -6,9 +6,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <!--   -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Height="250" Margin="102,336,66,182" Width="264"/>
+
+    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">-->
+        <Grid Margin="20,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Text="TimePickers" VerticalAlignment="Center"/>
+        <TimePicker Grid.Row="0"
+            Grid.Column="1"
+          ClockIdentifier="12HourClock"
+                    Margin="20,0,0,20"/>
+        <TextBlock Grid.Row="1"
+                       Text="CalendarPicker"
+                       VerticalAlignment="Center"/>
+        <CalendarDatePicker
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="20,0,0,20"
+            PlaceholderText="choose a date"/>
+        <TextBlock Grid.Row="2"  Text="CalendarView" VerticalAlignment="Center"     />
+        <StackPanel Grid.Row="2"
+                        Grid.Column="1"
+                        Margin="20,0,0,20"
+                        HorizontalAlignment="Left">
+            <CalendarView Name="MyCalendarView"
+                          SelectionMode="Multiple"
+                          SelectedDatesChanged="MyCalendarView_SelectionDatesChanged"/>
+            <TextBlock Name="CalendarViewResultTextBlock"/>
+        </StackPanel>
 
     </Grid>
 </Page>
