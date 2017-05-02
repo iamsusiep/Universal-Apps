@@ -49,21 +49,20 @@ namespace Lab4
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            if (InnerFrame.CanGoBack)
+            if (Frame.CanGoBack)
             {
-                InnerFrame.GoBack();
+                Frame.GoBack();
             }
         }
 
-        private void InnerFrame_Navigated(object sender, NavigationEventArgs e)
-        {
-            if (InnerFrame.CanGoBack)
-            {
-                InnerFrame.GoBack();
-            }
-        }
+  
 
         private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
