@@ -37,6 +37,21 @@ namespace Lecture
             var values = string.Join(",", selectedDates);
             CalendarViewResultTextBlock.Text = values;
         }
+        private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            MyFlyout.Hide();
+        }
+        private string[] selectionItems = new string[]
+            {"Ferdinand", "Frank", "Nigel", "Tag", "Tanya", "Tanner", "Todd"};
+    
+        private void MyAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            var autoSuggestBox = (AutoSuggestBox)sender;
+            var filtered = selectionItems
+                .Where(p => p.StartsWith(autoSuggestBox.Text))
+                .ToArray();
+            autoSuggestBox.ItemsSource = filtered;
+        }
         //private void HamburgerButton_Click(Object sender, RoutedEventArgs e)
         //{
         //    MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
