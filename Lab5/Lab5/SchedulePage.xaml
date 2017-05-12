@@ -8,9 +8,11 @@
     mc:Ignorable="d">
 
     <Grid Background="Green">
-        <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel Orientation ="Vertical">
+            <Image Name="logo" Source="Assets/logo.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+            <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top">
             <DatePicker/>
         </TimePicker>
-
+        </StackPanel>
     </Grid>
 </Page>

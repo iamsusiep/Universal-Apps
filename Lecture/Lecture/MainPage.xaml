@@ -5,9 +5,62 @@
     xmlns:local="using:Lecture"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:Lecture"
     mc:Ignorable="d">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <GridView ItemsSource="{x:Bind Books}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Book">
+                    <StackPanel>
+                        <Image Width="150" Source="{x:Bind CoverImage}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind Title}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind Author}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <TextBlock Grid.Row="1"
+                   Name="ResultTextBlock"
+                   FontSize="24"
+                   Foreground="Red"
+                   FontWeight="Bold"
+                   Margin="0,20,0,0"/>
+     
+    </Grid>
+</Page>
 
-    <!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -22,7 +75,7 @@
             <Image Source="Assets/Financial.png" Height="800" Stretch="None"/>
         </ScrollViewer>-->
 
-        <Page.Resources>
+        <!--<Page.Resources>
             <ResourceDictionary>
                 <SolidColorBrush x:Key="MyBrush" Color="Brown"/>
                 <x:String x:Key="greeting"> Hello world </x:String>
@@ -60,7 +113,7 @@
     
     
     
-        <!--<Grid Margin="20,20,0,0">
+        --><!--<Grid Margin="20,20,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -181,5 +234,5 @@
                           IsActive="True"/>
             
         </Grid>-->
-    <!--</Grid>-->
-</Page>
+    <!--</Grid>--><!--
+</Page>-->

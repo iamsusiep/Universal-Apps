@@ -8,6 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="Red">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Name="logo" Source="Assets/logo.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="0"/>
+            <TextBlock Text="Slider" Foreground="White" Grid.Row="1"/>
+                    
+            <Slider Name="MySlider" Grid.Row="1"
+                    Margin="20,0,0,20"
+                    Width="200" />
 
-    </Grid>
-</Page>
+    </Grid> </Page>

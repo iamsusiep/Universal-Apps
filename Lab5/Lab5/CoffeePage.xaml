@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="SaddleBrown">
-
+        <StackPanel Orientation ="Vertical">
+            <Image Name="logo" Source="Assets/logo.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        </StackPanel>
     </Grid>
 </Page>
