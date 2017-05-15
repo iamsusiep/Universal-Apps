@@ -8,11 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="Green">
-        <StackPanel Orientation ="Vertical">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
             <Image Name="logo" Source="Assets/logo.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-            <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top">
-            <DatePicker/>
-        </TimePicker>
-        </StackPanel>
+        <RelativePanel Grid.Row="1">
+            <TextBlock x:Name="Pickup" Text="Pickup:" Foreground="White" FontSize="25" Margin="20,0,0,0"/>
+            <TimePicker HorizontalAlignment="Left" VerticalAlignment="Top" RelativePanel.AlignLeftWith="Pickup" Margin="120,0,0,0" Foreground="White">
+            <CalendarDatePicker/>
+            </TimePicker>
+        </RelativePanel>
     </Grid>
 </Page>

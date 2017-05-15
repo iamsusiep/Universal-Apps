@@ -9,5 +9,12 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+        <Image Source ="Assets/coloredlogo.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" />
+        <Image Source="Assets/order.jpg" Stretch ="None"/>
+
+        <RelativePanel>
+            <TextBox Name ="order" Text ="Order" FontSize="36"  VerticalAlignment="Center" HorizontalAlignment="Center" RelativePanel.AlignVerticalCenterWithPanel="True" RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+            <TextBox Name ="number" Text ="96" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignTopWith="order" Margin="0,50,0,0"/>
+        </RelativePanel>
     </Grid>
 </Page>
