@@ -1,6 +1,7 @@
 ﻿using Lecture.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,11 +24,11 @@ namespace Lecture
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ObservableCollections<Book> Books;
+        private ObservableCollection<Book> Books;
         public MainPage()
         {
-            this.InitializeComponent();
             Books = BookManager.GetBooks();
+            this.InitializeComponent();
             //InnerFrame.Navigate(typeof(Page1));
         }
 
@@ -35,6 +36,13 @@ namespace Lecture
         {
             var book = (Book)e.ClickedItem;
             ResultTextBlock.Text = "You selected " + book.Title;
+        }
+
+        private void Annie_Click(object sender, RoutedEventArgs e)
+        {
+            //var book = new Book { 1, "Annie", "Poop" ,0};
+            Books.Add(new Book { BookId = 4, Title = "Annie's", Author = "Poop", CoverImage = "Assets/4.png" });
+
         }
 
         //private void MyCalendarView_SelectionDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)

@@ -27,8 +27,8 @@
                                              ItemTemplate="{StaticResource BookDataTemplate}">
 
         </GridView>
-
-         <TextBlock Grid.Row="1"
+        <Button x:Name="Annie" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Annie" FontSize="30" Click="Annie_Click"/>
+        <TextBlock Grid.Row="1"
                    Name="ResultTextBlock"
                    FontSize="24"
                    Foreground="Red"
