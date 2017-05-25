@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IndependentProject.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,11 @@ namespace IndependentProject
     /// </summary>
     public sealed partial class News : Page
     {
+        public NewsViewModel ViewModel { get; set; } = new NewsViewModel();
         public News()
         {
             this.InitializeComponent();
         }
+        protected async override
     }
 }
