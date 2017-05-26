@@ -28,6 +28,13 @@ namespace IndependentProject
         {
             this.InitializeComponent();
         }
-        protected async override
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            ViewModel.author = "author";
+             ViewModel.title = "Title";
+            ViewModel.description = "descript";
+            ViewModel.url = "https://aspen.bsd405.org/aspen/logon.do";
+            ViewModel.urlToImage = "https://si.wsj.net/public/resources/images/BN-TP889_g7ital_TOP_20170526084134.jpg";
+      }
     }
 }
