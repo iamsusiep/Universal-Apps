@@ -5,9 +5,24 @@
     xmlns:local="using:Lab6"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data ="using:Lab6"
     mc:Ignorable="d">
-
+    <!--<Page.Resources>
+        <DataTemplate x:DataType="data:" x:Key="ViewModelDataTemplate">
+            
+        </DataTemplate>
+    </Page.Resources>-->
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <StackPanel Background="LightBlue">
+            <StackPanel VerticalAlignment="Center">
+                <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center">
+                    <Image.Source>
+                        <BitmapImage UriSource="{x:Bind ViewModel.ImageUrl, Mode=OneWay}"/>
+                    </Image.Source>
+                </Image>
+                <TextBlock Name="TemperatureTextBlock" Text="{x:Bind ViewModel.Temperature, Mode=OneWay}" 
+                           FontSize="52" Foreground="White" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>
