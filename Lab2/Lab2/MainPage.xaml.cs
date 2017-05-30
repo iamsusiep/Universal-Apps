@@ -26,5 +26,10 @@ namespace Lab2
         {
             this.InitializeComponent();
         }
+
+        private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

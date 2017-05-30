@@ -26,5 +26,34 @@ namespace IndependentProject
         {
             this.InitializeComponent();
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (EventListBoxItem.IsSelected)
+            {
+
+                frame.Navigate(typeof(Event));
+                Title.Text = "Event";
+            }
+
+            if (FoodListBoxItem.IsSelected)
+            {
+
+                frame.Navigate(typeof(Food));
+                Title.Text = "Food";
+            }
+            if (NewsListBoxItem.IsSelected)
+            {
+
+                frame.Navigate(typeof(News));
+                Title.Text = "News";
+            }
+
+        }
     }
 }

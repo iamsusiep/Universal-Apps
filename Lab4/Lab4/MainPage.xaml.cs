@@ -26,5 +26,45 @@ namespace Lab4
         {
             this.InitializeComponent();
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
+        }
+
+        private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (FiancialListBoxItem.IsSelected)
+            {
+                pic.Navigate(typeof(Financial));
+                Title.Text = "Financial";
+            }
+            if (FoodListBoxItem.IsSelected)
+            {
+                pic.Navigate(typeof(Food));
+                Title.Text = "Food";
+            }
+
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
+        }
+
+  
+
+        private void Search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
