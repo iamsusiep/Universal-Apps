@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 //f3d8be790a344fffb4e4d640244046a1
 namespace IndependentProject.Models
 {
-    class Conditions
+    public class Conditions
     {
         public class Article
         {

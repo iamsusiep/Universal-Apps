@@ -5,23 +5,21 @@
     xmlns:local="using:IndependentProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-    xmlns:data="using:IndependentProject.Models"
+    xmlns:data="using:IndependentProject.ViewModels"
     mc:Ignorable="d">
-    <Page.Resources>
-        <DataTemplate x:DataType="data:News" x:Key="BookDataTemplate">
-            <StackPanel Background="Black">
-                <StackPanel VerticalAlignment="Center">
-                    <Image Name="Result Image" Width="200" Height="200" HorizontalAlignment="Center">
-                        <Image.Source>
-                            <BitmapImage UriSource="{x:Bind NewsViewModel.urlToImage, Mode=OneWay}"/>
-                        </Image.Source>
-                    </Image>
-                    <TextBlock Name="TitleTextBlock" Text="{x:Bind NewsViewModel.title, Mode=OneWay}" FontSize="52" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Name="DescriptionTextBlock" Text="{x:Bind NewsViewModel.description, Mode=OneWay}" FontSize="36" Foreground="White" HorizontalAlignment="Center"/>
-                    <TextBlock Name="AuthorTextBlock" Text="{x:Bind NewsViewModel.author, Mode=OneWay}" FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
-                </StackPanel>
-            </StackPanel>
-        </DataTemplate>
-    </Page.Resources>
+    <Grid>
 
+        <StackPanel Background="Black">
+            <StackPanel VerticalAlignment="Center">
+                <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center">
+                    <Image.Source>
+                        <BitmapImage UriSource="{x:Bind ViewModel.urlToImage, Mode=OneWay}"/>
+                    </Image.Source>
+                </Image>
+                <TextBlock Name="TitleTextBlock" Text="{x:Bind ViewModel.title, Mode=OneWay}" FontSize="52" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind ViewModel.description, Mode=OneWay}" FontSize="36" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Name="AuthorTextBlock" Text="{x:Bind ViewModel.author, Mode=OneWay}" FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </Page>
