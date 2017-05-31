@@ -17,7 +17,7 @@ namespace IndependentProject
         public async Task<ConditionsRootObject> GetConditions()
         {
             HttpClient httpClient = new HttpClient();
-            string apiUrl = $"https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=f3d8be790a344fffb4e4d640244046a1";
+            string apiUrl = $"https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey={apiKey}";
             string responseString = await httpClient.GetStringAsync(apiUrl);
             ConditionsRootObject conditions = JsonConvert.DeserializeObject<ConditionsRootObject>(responseString);
             return conditions;

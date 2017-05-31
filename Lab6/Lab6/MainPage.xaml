@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <!--<GridView ItemsSource="{x:Bind ViewModel.Forecast}">
+        <GridView ItemsSource="{x:Bind ViewModel.Forecast}">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:ForecastDayViewModel">
                     <StackPanel Background="LightBlue">
@@ -35,6 +35,6 @@
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
-        </GridView>-->
+        </GridView>
     </Grid>
 </Page>

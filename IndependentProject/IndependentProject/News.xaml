@@ -7,19 +7,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:data="using:IndependentProject.ViewModels"
     mc:Ignorable="d">
-    <Grid>
-
-        <StackPanel Background="Black">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions> 
+        <!--<GridView ItemsSource="{x:Bind ViewModel}">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:NewsViewModel">
+                    <StackPanel Background="Black">-->
             <StackPanel VerticalAlignment="Center">
-                <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center">
+                <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center" Stretch="None" Grid.Column="0">
                     <Image.Source>
                         <BitmapImage UriSource="{x:Bind ViewModel.urlToImage, Mode=OneWay}"/>
                     </Image.Source>
                 </Image>
-                <TextBlock Name="TitleTextBlock" Text="{x:Bind ViewModel.title, Mode=OneWay}" FontSize="52" Foreground="White" HorizontalAlignment="Center"/>
-                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind ViewModel.description, Mode=OneWay}" FontSize="36" Foreground="White" HorizontalAlignment="Center"/>
-                <TextBlock Name="AuthorTextBlock" Text="{x:Bind ViewModel.author, Mode=OneWay}" FontSize="24" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock Name="TitleTextBlock" Text="{x:Bind ViewModel.title, Mode=OneWay}" FontSize="25" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                <TextBlock Name="AuthorTextBlock" Text="{x:Bind ViewModel.author, Mode=OneWay}" FontSize="20" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind ViewModel.description, Mode=OneWay}" FontSize="16" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+
+
             </StackPanel>
-        </StackPanel>
+        <!--</StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>-->
+        
     </Grid>
 </Page>
