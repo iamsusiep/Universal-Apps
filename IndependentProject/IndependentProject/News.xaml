@@ -18,7 +18,7 @@
                 <DataTemplate x:DataType="data:NewsViewModel">
                     <StackPanel Background="Black">-->
             <StackPanel VerticalAlignment="Center">
-                <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center" Stretch="None" Grid.Column="0">
+                <Image Name="ResultImage" Width="500" Height="Auto" HorizontalAlignment="Center" Stretch="None" Grid.Column="0">
                     <Image.Source>
                         <BitmapImage UriSource="{x:Bind ViewModel.urlToImage, Mode=OneWay}"/>
                     </Image.Source>
