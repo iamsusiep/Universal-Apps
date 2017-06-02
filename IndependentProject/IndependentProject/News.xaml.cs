@@ -43,6 +43,7 @@ namespace IndependentProject
             ViewModel.url = "";
             ViewModel.urlToImage = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
 
+            
             await UpdateNews();
         }
 
@@ -51,12 +52,13 @@ namespace IndependentProject
             NewsRetriever newsRetriever =new NewsRetriever();
             ConditionsRootObject conditionsRoot = await newsRetriever.GetConditions();
 
-            //int i = 5;
+       
             ViewModel.author = conditionsRoot.articles.ElementAt(0).author;
             ViewModel.title = conditionsRoot.articles.ElementAt(0).title;
             ViewModel.description = conditionsRoot.articles.ElementAt(0).description;
             ViewModel.url = conditionsRoot.articles.ElementAt(0).url;
             ViewModel.urlToImage = conditionsRoot.articles.ElementAt(0).urlToImage;
+
 
 
         }
