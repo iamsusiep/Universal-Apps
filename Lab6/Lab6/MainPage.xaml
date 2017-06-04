@@ -7,32 +7,48 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:Lab6.ViewModels"
     mc:Ignorable="d">
-    <Grid>
+    <Grid Background="LightBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <AutoSuggestBox Name="LocationAutoSuggestBox" HorizontalAlignment="Center"
                             QueryIcon="Find" PlaceholderText="Enter Location..." Width="300"
                             TextMemberPath="name" DisplayMemberPath="name" 
                             TextChanged="LocationAutoSuggestBox_TextChanged"
                             QuerySubmitted="LocationAutoSuggestBox_QuerySubmitted"
-                            SuggestionChosen="LocationAutoSuggestBox_SuggestionChosen" />
-    <GridView ItemsSource="{x:Bind ViewModel.Forecast}">
+                            SuggestionChosen="LocationAutoSuggestBox_SuggestionChosen" Grid.Row="0" />
+        <StackPanel VerticalAlignment="Center" Grid.Row="1">
+            <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center">
+                <Image.Source>
+                    <BitmapImage UriSource="{x:Bind ViewModel.ImageUrl, Mode=OneWay}" />
+                </Image.Source>
+            </Image>
+            <TextBlock Name="TemperatureTextBlock" Text="{x:Bind ViewModel.Temperature, Mode=OneWay}"
+                       FontSize="52" Foreground="White" HorizontalAlignment="Center" />
+            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind ViewModel.Description, Mode=OneWay}"
+                       FontSize="36" Foreground="White" HorizontalAlignment="Center" />
+            <TextBlock Name="LocationNameTextBlock" Text="{x:Bind ViewModel.LocationName, Mode=OneWay}"
+                       FontSize="36" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+        </StackPanel>
+        <GridView ItemsSource="{x:Bind ViewModel.Forecast}" Grid.Row="2" HorizontalAlignment="Center">
         <GridView.ItemTemplate>
             <DataTemplate x:DataType="data:ForecastDayViewModel">
-                <StackPanel Background="LightBlue">
                     <StackPanel VerticalAlignment="Center">
-                    
+                        <TextBlock Name="DateTextBlock" Text="{x:Bind Date, Mode=OneWay}" FontSize="25" HorizontalAlignment="Center"/>
+                        <TextBlock Name="TemperatureTextBlock" Text="{x:Bind Temperature, Mode=OneWay}"
+                       FontSize="25" HorizontalAlignment="Center" />
                         <Image Name="ResultImage" Width="200" Height="200" HorizontalAlignment="Center">
                             <Image.Source>
                                 <BitmapImage UriSource="{x:Bind ImageUrl, Mode=OneWay}" />
                             </Image.Source>
                         </Image>
-                        <TextBlock Name="TemperatureTextBlock" Text="{x:Bind Temperature, Mode=OneWay}"
-                       FontSize="52" Foreground="White" HorizontalAlignment="Center" />
+                        
                         <TextBlock Name="DescriptionTextBlock" Text="{x:Bind Description, Mode=OneWay}"
-                       FontSize="36" Foreground="White" HorizontalAlignment="Center" />
-                        <TextBlock Name="LocationNameTextBlock" Text="{x:Bind LocationName, Mode=OneWay}"
-                       FontSize="36" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                       FontSize="25" HorizontalAlignment="Center" />
+                      
                     </StackPanel>
-                </StackPanel>
             </DataTemplate>
         </GridView.ItemTemplate>
     </GridView>

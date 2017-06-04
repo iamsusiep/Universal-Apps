@@ -13,12 +13,11 @@ namespace Lab6.ViewModels
     public class ForecastDayViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-
-        public string LocationName { get; set; }
-        public string Temperature { get; set; }
         public string Description { get; set; }
-        public string ImageUrl { get; set; }
 
+        public string Temperature { get; set; }
+        public string ImageUrl { get; set; }
+        public string Date { get; set; }
     }
 
 

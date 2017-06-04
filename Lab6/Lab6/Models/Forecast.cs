@@ -151,16 +151,16 @@ namespace Lab6.Models.Forecast
             public List<Forecastday2> forecastday { get; set; }
         }
 
-        /*public class Forecast
+        public class Forecast1
         {
             public TxtForecast txt_forecast { get; set; }
             public Simpleforecast simpleforecast { get; set; }
-        }*/
+        }
 
-        public class RootObject
+        public class ForecastRootObject
         {
             public Response response { get; set; }
-            public Forecast forecast { get; set; }
+            public Forecast1 forecast { get; set; }
         }
     }
 }

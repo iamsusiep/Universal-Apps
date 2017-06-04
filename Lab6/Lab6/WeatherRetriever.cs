@@ -8,6 +8,7 @@ using Lab6.Models;
 using Newtonsoft.Json;
 using static Lab6.Models.Conditions;
 using static Lab6.Models.AutoComplete;
+using static Lab6.Models.Forecast.Forecast;
 
 namespace Lab6
 {
@@ -30,6 +31,14 @@ namespace Lab6
             string responseString = await httpClient.GetStringAsync(apiUrl);
             AutoCompleteRootObject conditions = JsonConvert.DeserializeObject<AutoCompleteRootObject>(responseString);
             return conditions;
+        }
+        public async Task <ForecastRootObject> GetForecast(string cityLink)
+        {
+            HttpClient httpClient = new HttpClient();
+            string apiUrl = $"http://api.wunderground.com/api/{apiKey}/forecast{cityLink}.json";
+            string responseString = await httpClient.GetStringAsync(apiUrl);
+            ForecastRootObject forecast = JsonConvert.DeserializeObject<ForecastRootObject>(responseString);
+            return forecast;
         }
     }
 }
