@@ -20,7 +20,7 @@ namespace IndependentProject.ViewModels
         public string url { get; set; }
         public string urlToImage { get; set; }
 
-        public ObservableCollection<NewsDayViewModel> news { get; }
+        public ObservableCollection<NewsDayViewModel> News { get; }
         = new ObservableCollection<NewsDayViewModel>();
     }
 }

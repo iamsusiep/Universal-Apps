@@ -1,6 +1,7 @@
 ﻿using IndependentProject.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -26,22 +27,20 @@ namespace IndependentProject
     public sealed partial class News : Page
     {
         public NewsViewModel ViewModel { get; set; } = new NewsViewModel();
+        private ObservableCollection<NewsDayViewModel> news;
+//        public NewsViewModel ViewModel { get; set; } = new NewsViewModel();
         public News()
         {
-           /* ViewModel.author = "author";
-             ViewModel.title = "Title";
-            ViewModel.description = "descript";
-            ViewModel.url = "https://aspen.bsd405.org/aspen/logon.do";
-            ViewModel.urlToImage = "https://si.wsj.net/public/resources/images/BN-TP889_g7ital_TOP_20170526084134.jpg";*/
             this.InitializeComponent();
+            news = ViewModel.News;
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            ViewModel.author = "";
-            ViewModel.title = "";
-            ViewModel.description = "Loading...";
-            ViewModel.url = "";
-            ViewModel.urlToImage = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
+            //news.ElementAt(0).author = "";
+            //news.ElementAt(0).title = "";
+            //news.ElementAt(0).description = "Loading...";
+            //news.ElementAt(0).url = "";
+            //news.ElementAt(0).urlToImage = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
 
             
             await UpdateNews();
@@ -51,14 +50,37 @@ namespace IndependentProject
         {
             NewsRetriever newsRetriever =new NewsRetriever();
             ConditionsRootObject conditionsRoot = await newsRetriever.GetConditions();
+            NewsDayViewModel first = new NewsDayViewModel();
 
-       
-            ViewModel.author = conditionsRoot.articles.ElementAt(0).author;
-            ViewModel.title = conditionsRoot.articles.ElementAt(0).title;
-            ViewModel.description = conditionsRoot.articles.ElementAt(0).description;
-            ViewModel.url = conditionsRoot.articles.ElementAt(0).url;
-            ViewModel.urlToImage = conditionsRoot.articles.ElementAt(0).urlToImage;
+            first.author = conditionsRoot.articles.ElementAt(0).author;
+            first.title = conditionsRoot.articles.ElementAt(0).title;
+            first.description = conditionsRoot.articles.ElementAt(0).description;
+            first.url = conditionsRoot.articles.ElementAt(0).url;
+            first.urlToImage = conditionsRoot.articles.ElementAt(0).urlToImage;
+            news.Add(first);
 
+            NewsDayViewModel second = new NewsDayViewModel();
+            second.author = conditionsRoot.articles.ElementAt(1).author;
+            second.title = conditionsRoot.articles.ElementAt(1).title;
+            second.description = conditionsRoot.articles.ElementAt(1).description;
+            second.url = conditionsRoot.articles.ElementAt(1).url;
+            second.urlToImage = conditionsRoot.articles.ElementAt(1).urlToImage;
+            news.Add(second);
+
+            NewsDayViewModel third = new NewsDayViewModel();
+            third.author = conditionsRoot.articles.ElementAt(2).author;
+            third.title = conditionsRoot.articles.ElementAt(2).title;
+            third.description = conditionsRoot.articles.ElementAt(2).description;
+            third.url = conditionsRoot.articles.ElementAt(2).url;
+            third.urlToImage = conditionsRoot.articles.ElementAt(2).urlToImage;
+            news.Add(third);
+            NewsDayViewModel fourth = new NewsDayViewModel();
+            fourth.author = conditionsRoot.articles.ElementAt(3).author;
+            fourth.title = conditionsRoot.articles.ElementAt(3).title;
+            fourth.description = conditionsRoot.articles.ElementAt(3).description;
+            fourth.url = conditionsRoot.articles.ElementAt(3).url;
+            fourth.urlToImage = conditionsRoot.articles.ElementAt(3).urlToImage;
+            news.Add(fourth);
 
 
         }
