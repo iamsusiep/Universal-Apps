@@ -36,12 +36,7 @@ namespace IndependentProject
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //news.ElementAt(0).author = "";
-            //news.ElementAt(0).title = "";
-            //news.ElementAt(0).description = "Loading...";
-            //news.ElementAt(0).url = "";
-            //news.ElementAt(0).urlToImage = "https://upload.wikimedia.org/wikipedia/commons/3/3a/Gray_circles_rotate.gif";
-
+          
             
             await UpdateNews();
         }

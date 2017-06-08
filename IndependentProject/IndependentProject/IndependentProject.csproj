@@ -105,15 +105,16 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\Conditions.cs" />
+    <Compile Include="Models\TechArticles.cs" />
     <Compile Include="News.xaml.cs">
       <DependentUpon>News.xaml</DependentUpon>
     </Compile>
     <Compile Include="NewsRetriever.cs" />
-    <Compile Include="Pizza.cs" />
-    <Compile Include="PizzaManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\NewsDayViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\TechViewDayModel.cs" />
+    <Compile Include="ViewModels\TechViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

@@ -15,12 +15,12 @@
                         <StackPanel VerticalAlignment="Center" Orientation="Vertical">
                         <Image Name="ResultImage" Width="Auto" Height="Auto" HorizontalAlignment="Center" Stretch="None" Grid.Column="0">
                             <Image.Source>
-                                <BitmapImage UriSource="{x:Bind urlToImage, Mode=OneWay}"/>
+                                <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
                             </Image.Source>
                         </Image>
-                        <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Width="450"/>
-                        <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Width="450"/>
-                        <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Width="450"/>
+                            <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="500"/>
+                            <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
+                        <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" Foreground="White" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
                     </StackPanel>
                     </StackPanel>
                 </DataTemplate>

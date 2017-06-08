@@ -5,6 +5,7 @@
     xmlns:local="using:IndependentProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+   xmlns:data="using:IndependentProject"
     mc:Ignorable="d">
 
     <Grid Background="Peru">
@@ -13,14 +14,18 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Image Source="Assets/download.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0"/>
-        <GridView>
+        <!--<Image Source="Assets/download.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0"/>
+        <GridView ItemsSource="{x:Bind pizzas}" Grid.Row="1">
             <GridView.ItemTemplate>
-                <DataTemplate>
-                    
+                <DataTemplate x:DataType="data:Pizza">
+                    <StackPanel>
+                        <Image Width="150" Source="{x:Bind Image}"/>
+                        <TextBlock FontSize="16" Text="{x:Bind Name}"/>
+                    </StackPanel>
+
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <TextBlock Grid.Row="2" Name="ResultTextBlock" FontSize="24" Foreground="Black" FontWeight="Bold" Margin="0,20,0,0"/>
+        <TextBlock Grid.Row="2" Name="ResultTextBlock" FontSize="24" Foreground="Black" FontWeight="Bold" Margin="0,20,0,0"/>-->
     </Grid>
 </Page>

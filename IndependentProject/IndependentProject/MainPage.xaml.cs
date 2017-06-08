@@ -45,13 +45,13 @@ namespace IndependentProject
             {
 
                 frame.Navigate(typeof(Food));
-                Title.Text = "Food";
+                Title.Text = "Technology";
             }
             if (NewsListBoxItem.IsSelected)
             {
 
                 frame.Navigate(typeof(News));
-                Title.Text = "News";
+                Title.Text = "Business";
             }
 
         }
