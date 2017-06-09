@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\SportsArticles.cs" />
     <Compile Include="Sports.xaml.cs">
       <DependentUpon>Sports.xaml</DependentUpon>
     </Compile>
@@ -113,6 +114,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\NewsDayViewModel.cs" />
     <Compile Include="ViewModels\NewsViewModel.cs" />
+    <Compile Include="ViewModels\SportsDayViewModel.cs" />
+    <Compile Include="ViewModels\SportsViewModel.cs" />
     <Compile Include="ViewModels\TechViewDayModel.cs" />
     <Compile Include="ViewModels\TechViewModel.cs" />
   </ItemGroup>

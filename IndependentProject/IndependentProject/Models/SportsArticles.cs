@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace IndependentProject.Models
 {
-    public class TechArticles
+    public class SportsArticles
     {
-
-
         public class Article
         {
             public string author { get; set; }
@@ -20,14 +18,12 @@ namespace IndependentProject.Models
             public string publishedAt { get; set; }
         }
 
-        public class TechRootObject
+        public class SportsRootObject
         {
             public string status { get; set; }
             public string source { get; set; }
             public string sortBy { get; set; }
             public List<Article> articles { get; set; }
         }
-
-
     }
 }

@@ -5,27 +5,28 @@
     xmlns:local="using:IndependentProject"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-   xmlns:data="using:IndependentProject"
+   xmlns:data="using:IndependentProject.ViewModels"
     mc:Ignorable="d">
 
     <Grid Background="Peru">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <!--<Image Source="Assets/download.png" Stretch="None" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0"/>
-        <GridView ItemsSource="{x:Bind pizzas}" Grid.Row="1">
+        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Pizza">
-                    <StackPanel>
-                        <Image Width="150" Source="{x:Bind Image}"/>
-                        <TextBlock FontSize="16" Text="{x:Bind Name}"/>
+                <DataTemplate x:DataType="data:TechViewDayModel">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                            <Image Name="ResultImage" Width="800" Height="Auto" HorizontalAlignment="Center" Grid.Column="0" >
+                                <Image.Source>
+                                    <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
+                                </Image.Source>
+                            </Image>
+                            <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="500"/>
+                            <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
+                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
+                        </StackPanel>
                     </StackPanel>
-
                 </DataTemplate>
             </GridView.ItemTemplate>
+
         </GridView>
-        <TextBlock Grid.Row="2" Name="ResultTextBlock" FontSize="24" Foreground="Black" FontWeight="Bold" Margin="0,20,0,0"/>-->
-    </Grid>
+        </Grid>
 </Page>
