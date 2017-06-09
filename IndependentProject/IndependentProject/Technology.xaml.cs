@@ -20,29 +20,11 @@ namespace IndependentProject
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Event : Page
+    public sealed partial class Technology : Page
     {
-        public Event()
+        public Technology()
         {
             this.InitializeComponent();
-        }
-
-        private void DatePicker_SelectedDateChanged(object sender, DatePickerValueChangedEventArgs e)
-        {
-            //var picker = sender as DatePicker;
-
-            //// ... Get nullable DateTime from SelectedDate.
-            //DateTime? date = picker.Date;
-            //if (date == null)
-            //{
-            //    // ... A null object.
-            //    this.Title = "No date";
-            //}
-            //else
-            //{
-            //    // ... No need to display the time.
-            //    this.Title = date.Value.ToShortDateString();
-            //}
         }
     }
 }

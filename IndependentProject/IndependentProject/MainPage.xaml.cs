@@ -34,17 +34,17 @@ namespace IndependentProject
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (EventListBoxItem.IsSelected)
+            if (SportsListBoxItem.IsSelected)
             {
 
-                frame.Navigate(typeof(Event));
-                Title.Text = "Event";
+                frame.Navigate(typeof(Sports));
+                Title.Text = "Sports";
             }
 
-            if (FoodListBoxItem.IsSelected)
+            if (TechListBoxItem.IsSelected)
             {
 
-                frame.Navigate(typeof(Food));
+                frame.Navigate(typeof(Technology));
                 Title.Text = "Technology";
             }
             if (NewsListBoxItem.IsSelected)

@@ -95,11 +95,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Event.xaml.cs">
-      <DependentUpon>Event.xaml</DependentUpon>
+    <Compile Include="Sports.xaml.cs">
+      <DependentUpon>Sports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Food.xaml.cs">
-      <DependentUpon>Food.xaml</DependentUpon>
+    <Compile Include="Technology.xaml.cs">
+      <DependentUpon>Technology.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -126,7 +126,12 @@
     <Content Include="Assets\BC.jpg" />
     <Content Include="Assets\download.png" />
     <Content Include="Assets\H.jpg" />
+    <Content Include="Assets\newspaper.png" />
+    <Content Include="Assets\newspapers.jpg" />
+    <Content Include="Assets\talk.png" />
     <Content Include="Assets\V.jpg" />
+    <Content Include="Assets\verge.png" />
+    <Content Include="Assets\wsj.png" />
     <Content Include="FodyWeavers.xml" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -142,11 +147,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Event.xaml">
+    <Page Include="Sports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Food.xaml">
+    <Page Include="Technology.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -14,27 +14,36 @@
         </Grid.RowDefinitions>
         <RelativePanel Grid.Row="0">
             <Button Name ="HamburgerButton" FontFamily ="Segoe MDL2 Assets" Content ="&#xE700;" FontSize ="36" Click ="HamburgerButton_Click"/>
-            <TextBlock Name ="Title" FontSize ="36" Text="Event"  RelativePanel.AlignHorizontalCenterWithPanel ="True" Foreground="Black"/>
+            <TextBlock Name ="Title" FontSize ="36" Text="News"  RelativePanel.AlignHorizontalCenterWithPanel ="True" Foreground="Black"/>
         </RelativePanel>
+        <StackPanel Orientation="Vertical" Grid.Row="1" Background="Turquoise">
+             <TextBlock Text="Choose a newspaper you would like to read!" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1"  FontWeight="Bold"/>
+               <Image Name="news" Source="Assets/newspaper.png" Stretch ="None" Grid.Row="1"/>
+        </StackPanel>
+           
+
         <SplitView Name ="MySplitView" Grid.Row ="1" DisplayMode ="CompactOverlay" OpenPaneLength ="200" CompactPaneLength="56">
             <SplitView.Pane>
                 <ListBox Name="IconsListBox" SelectionMode ="Single" SelectionChanged ="IconsListBox_SelectionChanged">
-                    <ListBoxItem Name ="EventListBoxItem">
+                    <ListBoxItem Name ="SportsListBoxItem">
                         <StackPanel Orientation ="Horizontal">
-                            <TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE787;" FontSize ="36" />
-                        <TextBlock Text ="Event" FontSize ="24" Margin ="20,0,0,0"/>
+                            <!--<TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE787;" FontSize ="36" />-->
+                            <Image Source="Assets/talk.png" Width="30"/>
+                            <TextBlock Text ="Sports" FontSize ="24" Margin ="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Name ="FoodListBoxItem">
+                    <ListBoxItem Name ="TechListBoxItem">
                         <StackPanel Orientation ="Horizontal">
-                            <TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE76E;" FontSize ="36" />
-                            <TextBlock Text ="Food" FontSize ="24" Margin ="20,0,0,0"/>
+                            <!--<TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE76E;" FontSize ="36" />-->
+                            <Image Source="Assets/verge.png" Width="30"/>
+                            <TextBlock Text ="Technology" FontSize ="24" Margin ="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                     <ListBoxItem Name ="NewsListBoxItem">
                         <StackPanel Orientation ="Horizontal">
-                            <TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE72D;" FontSize ="36" />
-                            <TextBlock Text ="News" FontSize ="24" Margin ="20,0,0,0"/>
+                            <!--<TextBlock FontFamily ="Segoe MDL2 Assets" Text ="&#xE72D;" FontSize ="36" />-->
+                            <Image Source="Assets/wsj.png" Width="30"/>
+                            <TextBlock Text ="Business" FontSize ="24" Margin ="20,0,0,0"/>
                         </StackPanel>
                     </ListBoxItem>
                 </ListBox>

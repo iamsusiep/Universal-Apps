@@ -19,6 +19,7 @@ namespace IndependentProject.ViewModels
         public string description { get; set; }
         public string url { get; set; }
         public string urlToImage { get; set; }
+   
 
         public ObservableCollection<NewsDayViewModel> News { get; }
         = new ObservableCollection<NewsDayViewModel>();
