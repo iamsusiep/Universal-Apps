@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Button Name ="Button" Click="Button_Click"/>
+        <!--<WebView HorizontalAlignment ="Left" Height="209" Margin ="10,50,0,0" VerticalAlignment="Top" Width="272"/>
+        <Button Content ="Button" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="41"/>-->
     </Grid>
 </Page>

@@ -1,19 +1,4 @@
-﻿using Lecture.Models;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+﻿using Windows.UI.Xaml.Controls;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -24,26 +9,26 @@ namespace Lecture
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private ObservableCollection<Book> Books;
-        public MainPage()
-        {
-            Books = BookManager.GetBooks();
-            this.InitializeComponent();
-            //InnerFrame.Navigate(typeof(Page1));
-        }
+        //private ObservableCollection<Book> Books;
+        //public MainPage()
+        //{
+        //    Books = BookManager.GetBooks();
+        //    this.InitializeComponent();
+        //    //InnerFrame.Navigate(typeof(Page1));
+        //}
 
-        private void GridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            var book = (Book)e.ClickedItem;
-            ResultTextBlock.Text = "You selected " + book.Title;
-        }
+        //private void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    var book = (Book)e.ClickedItem;
+        //    ResultTextBlock.Text = "You selected " + book.Title;
+        //}
 
-        private void Annie_Click(object sender, RoutedEventArgs e)
-        {
-            //var book = new Book { 1, "Annie", "Poop" ,0};
-            Books.Add(new Book { BookId = 4, Title = "Annie's", Author = "Poop", CoverImage = "Assets/4.png" });
+        //private void Annie_Click(object sender, RoutedEventArgs e)
+        //{
+        //    //var book = new Book { 1, "Annie", "Poop" ,0};
+        //    Books.Add(new Book { BookId = 4, Title = "Annie's", Author = "Poop", CoverImage = "Assets/4.png" });
 
-        }
+        //}
 
         //private void MyCalendarView_SelectionDatesChanged(CalendarView sender, CalendarViewSelectedDatesChangedEventArgs args)
         //{
