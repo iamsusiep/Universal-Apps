@@ -13,7 +13,7 @@
                 <DataTemplate x:DataType="data:NewsDayViewModel">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel VerticalAlignment="Center" Orientation="Vertical">
-                            <Image Name="ResultImage" Width="800" Height="Auto" HorizontalAlignment="Center" Grid.Column="0">
+                            <Image Name="ResultImage" Width="500" Height="Auto" HorizontalAlignment="Center" Grid.Column="0">
                             <Image.Source>
                                 <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
                             </Image.Source>
