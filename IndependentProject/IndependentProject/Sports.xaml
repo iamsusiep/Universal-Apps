@@ -12,21 +12,35 @@
         <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:SportsDayViewModel">
-                    <StackPanel Orientation="Horizontal">
+                    <Button Name="MyFlyoutButton">
+                        <StackPanel Orientation="Horizontal">
                         <StackPanel VerticalAlignment="Center" Orientation="Vertical">
                             <Image Name="ResultImage" Width="500" Height="Auto" HorizontalAlignment="Center" Grid.Column="0" >
                                 <Image.Source>
                                     <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
                                 </Image.Source>
                             </Image>
-                            <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="500"/>
-                            <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
-                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
+                            <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="630"/>
+                            <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
+                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
                         </StackPanel>
                     </StackPanel>
+                       <Button.Flyout>
+                            <Flyout x:Name="MyFlyout">
+                                <StackPanel Margin="20,20,20,20">
+                                    <TextBlock Text="URL:" FontSize="16" FontWeight="Bold"/>
+                                    <TextBlock Text="{x:Bind url, Mode=OneWay}" FontSize="10" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+                                    <Button Name="InnerFlyoutButton" HorizontalAlignment="Left" Content ="Close" Click="InnerFlyoutButton_Click"/>
+                                </StackPanel>
+                            </Flyout>
+                        </Button.Flyout>
+                    </Button>
+                   
                 </DataTemplate>
             </GridView.ItemTemplate>
 
         </GridView>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="-468,348,0,0" VerticalAlignment="Top" Width="100"/>
+
     </Grid>
 </Page>

@@ -75,6 +75,13 @@ namespace IndependentProject
             news.Add(fourth);
 
         }
+
+        private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
+        {
+        //    int i = 5;
+        //    //e.OriginalSource
+        }
+
         //private void DatePicker_SelectedDateChanged(object sender, DatePickerValueChangedEventArgs e)
         //{
         //    //var picker = sender as DatePicker;
