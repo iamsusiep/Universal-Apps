@@ -36,8 +36,10 @@ namespace IndependentProject
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
-          
-            
+            ViewModel.description = "";
+            ViewModel.author = "";
+            ViewModel.title = "Loading...";
+
             await UpdateNews();
         }
 

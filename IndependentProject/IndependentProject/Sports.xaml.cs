@@ -76,10 +76,13 @@ namespace IndependentProject
 
         }
 
+
+
         private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
         {
-        //    int i = 5;
-        //    //e.OriginalSource
+            //MyFlyout.Hide();
+            ////    int i = 5;
+        ////    //e.OriginalSource
         }
 
         //private void DatePicker_SelectedDateChanged(object sender, DatePickerValueChangedEventArgs e)
