@@ -82,7 +82,49 @@ namespace IndependentProject
 
         }
 
+        private async Task MoreNews()
+        {
+            NewsRetriever newsRetriever = new NewsRetriever();
+            ConditionsRootObject conditionsRoot = await newsRetriever.GetConditions();
+            NewsDayViewModel first = new NewsDayViewModel();
+
+            first.author = conditionsRoot.articles.ElementAt(4).author;
+            first.title = conditionsRoot.articles.ElementAt(4).title;
+            first.description = conditionsRoot.articles.ElementAt(4).description;
+            first.url = conditionsRoot.articles.ElementAt(4).url;
+            first.urlToImage = conditionsRoot.articles.ElementAt(4).urlToImage;
+            news.Add(first);
+
+            NewsDayViewModel second = new NewsDayViewModel();
+            second.author = conditionsRoot.articles.ElementAt(5).author;
+            second.title = conditionsRoot.articles.ElementAt(5).title;
+            second.description = conditionsRoot.articles.ElementAt(5).description;
+            second.url = conditionsRoot.articles.ElementAt(5).url;
+            second.urlToImage = conditionsRoot.articles.ElementAt(5).urlToImage;
+            news.Add(second);
+
+            NewsDayViewModel third = new NewsDayViewModel();
+            third.author = conditionsRoot.articles.ElementAt(6).author;
+            third.title = conditionsRoot.articles.ElementAt(6).title;
+            third.description = conditionsRoot.articles.ElementAt(6).description;
+            third.url = conditionsRoot.articles.ElementAt(6).url;
+            third.urlToImage = conditionsRoot.articles.ElementAt(6).urlToImage;
+            news.Add(third);
+            NewsDayViewModel fourth = new NewsDayViewModel();
+            fourth.author = conditionsRoot.articles.ElementAt(7).author;
+            fourth.title = conditionsRoot.articles.ElementAt(7).title;
+            fourth.description = conditionsRoot.articles.ElementAt(7).description;
+            fourth.url = conditionsRoot.articles.ElementAt(7).url;
+            fourth.urlToImage = conditionsRoot.articles.ElementAt(7).urlToImage;
+            news.Add(fourth);
 
 
+        }
+
+        private async void More_Click(object sender, RoutedEventArgs e)
+        {
+            await MoreNews();
+            More.Visibility = Visibility.Collapsed;
+        }
     }
 }

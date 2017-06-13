@@ -77,7 +77,47 @@ namespace IndependentProject
             news.Add(fourth);
 
         }
+        private async Task MoreTechNews()
+        {
+            NewsRetriever newsRetriever = new NewsRetriever();
+            TechRootObject techRoot = await newsRetriever.GetTechArticles();
+            TechViewDayModel first = new TechViewDayModel();
 
-      
+            first.author = techRoot.articles.ElementAt(4).author;
+            first.title = techRoot.articles.ElementAt(4).title;
+            first.description = techRoot.articles.ElementAt(4).description;
+            first.url = techRoot.articles.ElementAt(4).url;
+            first.urlToImage = techRoot.articles.ElementAt(4).urlToImage;
+            news.Add(first);
+
+            TechViewDayModel second = new TechViewDayModel();
+            second.author = techRoot.articles.ElementAt(5).author;
+            second.title = techRoot.articles.ElementAt(5).title;
+            second.description = techRoot.articles.ElementAt(5).description;
+            second.url = techRoot.articles.ElementAt(5).url;
+            second.urlToImage = techRoot.articles.ElementAt(5).urlToImage;
+            news.Add(second);
+
+            TechViewDayModel third = new TechViewDayModel();
+            third.author = techRoot.articles.ElementAt(6).author;
+            third.title = techRoot.articles.ElementAt(6).title;
+            third.description = techRoot.articles.ElementAt(6).description;
+            third.url = techRoot.articles.ElementAt(6).url;
+            third.urlToImage = techRoot.articles.ElementAt(6).urlToImage;
+            news.Add(third);
+            TechViewDayModel fourth = new TechViewDayModel();
+            fourth.author = techRoot.articles.ElementAt(7).author;
+            fourth.title = techRoot.articles.ElementAt(7).title;
+            fourth.description = techRoot.articles.ElementAt(7).description;
+            fourth.url = techRoot.articles.ElementAt(7).url;
+            fourth.urlToImage = techRoot.articles.ElementAt(7).urlToImage;
+            news.Add(fourth);
+        }
+
+        private async void More_Click(object sender, RoutedEventArgs e)
+        {
+            await MoreTechNews();
+            More.Visibility = Visibility.Collapsed;
+        }
     }
 }

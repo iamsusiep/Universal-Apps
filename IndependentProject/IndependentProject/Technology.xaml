@@ -15,19 +15,22 @@
                 <DataTemplate x:DataType="data:TechViewDayModel">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel VerticalAlignment="Center" Orientation="Vertical">
-                            <Image Name="ResultImage" Width="500" Height="Auto" HorizontalAlignment="Center" Grid.Column="0" >
+                            <Image Name="ResultImage" Width="700" Height="400" HorizontalAlignment="Center" Grid.Column="0" Stretch="UniformToFill" >
                                 <Image.Source>
                                     <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
                                 </Image.Source>
                             </Image>
                             <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="500"/>
                             <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
-                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
+                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="500" Height="Auto"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </GridView.ItemTemplate>
 
         </GridView>
-        </Grid>
+        <Button x:Name="More" Content="More" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="More_Click" Background="BlanchedAlmond"
+                FontWeight="Bold"/>
+
+    </Grid>
 </Page>

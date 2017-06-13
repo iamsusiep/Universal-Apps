@@ -14,17 +14,17 @@
                 <DataTemplate x:DataType="data:SportsDayViewModel">
                     <Button Name="MyFlyoutButton">
                         <StackPanel Orientation="Horizontal">
-                        <StackPanel VerticalAlignment="Center" Orientation="Vertical">
-                            <Image Name="ResultImage" Width="500" Height="Auto" HorizontalAlignment="Center" Grid.Column="0" >
-                                <Image.Source>
-                                    <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
-                                </Image.Source>
-                            </Image>
-                            <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="630"/>
-                            <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
-                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="16" HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
+                            <StackPanel VerticalAlignment="Center" Orientation="Vertical">
+                                <Image Name="ResultImage" Width="600" Height="400" HorizontalAlignment="Center" Grid.Column="0" >
+                                    <Image.Source>
+                                        <BitmapImage UriSource="{x:Bind nonNullUrlToImage, Mode=OneWay}"/>
+                                    </Image.Source>
+                                </Image>
+                                <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="630"/>
+                                <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
+                                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="630" Height="Auto"/>
+                            </StackPanel>
                         </StackPanel>
-                    </StackPanel>
 
                         <Button.Flyout>
                             <Flyout x:Name="MyFlyout">
@@ -36,11 +36,11 @@
                             </Flyout>
                         </Button.Flyout>
                     </Button>
-                   
+
                 </DataTemplate>
             </GridView.ItemTemplate>
-
         </GridView>
+        <Button x:Name="More" Content="More" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="More_Click" Background="Pink" FontWeight="Bold"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="100" Margin="-468,348,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>

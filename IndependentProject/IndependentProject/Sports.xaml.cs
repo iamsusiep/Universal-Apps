@@ -75,6 +75,43 @@ namespace IndependentProject
             news.Add(fourth);
 
         }
+        private async Task MoreSportsNews()
+        {
+            NewsRetriever newsRetriever = new NewsRetriever();
+            SportsRootObject sportsRoot = await newsRetriever.GetSportsArticles();
+            SportsDayViewModel first = new SportsDayViewModel();
+
+            first.author = sportsRoot.articles.ElementAt(4).author;
+            first.title = sportsRoot.articles.ElementAt(4).title;
+            first.description = sportsRoot.articles.ElementAt(4).description;
+            first.url = sportsRoot.articles.ElementAt(4).url;
+            first.urlToImage = sportsRoot.articles.ElementAt(4).urlToImage;
+            news.Add(first);
+
+            SportsDayViewModel second = new SportsDayViewModel();
+            second.author = sportsRoot.articles.ElementAt(5).author;
+            second.title = sportsRoot.articles.ElementAt(5).title;
+            second.description = sportsRoot.articles.ElementAt(5).description;
+            second.url = sportsRoot.articles.ElementAt(5).url;
+            second.urlToImage = sportsRoot.articles.ElementAt(5).urlToImage;
+            news.Add(second);
+
+            SportsDayViewModel third = new SportsDayViewModel();
+            third.author = sportsRoot.articles.ElementAt(6).author;
+            third.title = sportsRoot.articles.ElementAt(6).title;
+            third.description = sportsRoot.articles.ElementAt(6).description;
+            third.url = sportsRoot.articles.ElementAt(6).url;
+            third.urlToImage = sportsRoot.articles.ElementAt(6).urlToImage;
+            news.Add(third);
+            SportsDayViewModel fourth = new SportsDayViewModel();
+            fourth.author = sportsRoot.articles.ElementAt(7).author;
+            fourth.title = sportsRoot.articles.ElementAt(7).title;
+            fourth.description = sportsRoot.articles.ElementAt(7).description;
+            fourth.url = sportsRoot.articles.ElementAt(7).url;
+            fourth.urlToImage = sportsRoot.articles.ElementAt(7).urlToImage;
+            news.Add(fourth);
+
+        }
 
 
 
@@ -83,6 +120,13 @@ namespace IndependentProject
             //MyFlyout.Hide();
             ////    int i = 5;
         ////    //e.OriginalSource
+        }
+
+        private async void More_Click(object sender, RoutedEventArgs e)
+        {
+            await MoreSportsNews();
+            More.Visibility = Visibility.Collapsed;
+           
         }
 
         //private void DatePicker_SelectedDateChanged(object sender, DatePickerValueChangedEventArgs e)
