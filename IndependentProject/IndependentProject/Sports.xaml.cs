@@ -117,7 +117,8 @@ namespace IndependentProject
 
         private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
         {
-            //MyFlyout.Hide();
+            int a = 0;
+            a++;
             ////    int i = 5;
         ////    //e.OriginalSource
         }

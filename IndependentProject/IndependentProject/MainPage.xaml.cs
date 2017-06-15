@@ -36,6 +36,7 @@ namespace IndependentProject
         {
             if (SportsListBoxItem.IsSelected)
             {
+                //BackButton.Visibility = Visibility.Visible;
 
                 frame.Navigate(typeof(Sports));
                 Title.Text = "Sports";
@@ -43,12 +44,13 @@ namespace IndependentProject
 
             if (TechListBoxItem.IsSelected)
             {
-
+                BackButton.Visibility = Visibility.Visible;
                 frame.Navigate(typeof(Technology));
                 Title.Text = "Technology";
             }
             if (NewsListBoxItem.IsSelected)
             {
+                BackButton.Visibility = Visibility.Visible;
 
                 frame.Navigate(typeof(News));
                 Title.Text = "Business";
@@ -58,10 +60,13 @@ namespace IndependentProject
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            if (Frame.CanGoBack)
-            {
-                Frame.GoBack();
-            }
+            BackButton.Visibility = Visibility.Collapsed;
+           
+            if (frame.CanGoBack)
+           {
+              frame.GoBack();
+           }
+          
         }
     }
 }
