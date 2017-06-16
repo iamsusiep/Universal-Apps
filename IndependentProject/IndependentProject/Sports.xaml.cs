@@ -115,19 +115,31 @@ namespace IndependentProject
 
 
 
-        private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
-        {
-            int a = 0;
-            a++;
-            ////    int i = 5;
-        ////    //e.OriginalSource
-        }
+        //private void InnerFlyoutButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    int a = 0;
+        //    a++;
+        //    ////    int i = 5;
+        //////    //e.OriginalSource
+        //}
 
         private async void More_Click(object sender, RoutedEventArgs e)
         {
             await MoreSportsNews();
             More.Visibility = Visibility.Collapsed;
            
+        }
+
+        private async void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string x = "URL: \n" + ((SportsDayViewModel)e.ClickedItem).url;
+            var dialog = new Windows.UI.Popups.MessageDialog(x);
+            dialog.Commands.Add(new Windows.UI.Popups.UICommand("Close") { Id = 1 });
+            dialog.CancelCommandIndex = 1;
+
+            var result = await dialog.ShowAsync();
+            var btn = sender as Button;
+            //btn.Content = "URL:";
         }
 
         //private void DatePicker_SelectedDateChanged(object sender, DatePickerValueChangedEventArgs e)

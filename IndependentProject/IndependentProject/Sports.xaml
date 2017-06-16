@@ -9,10 +9,10 @@
     mc:Ignorable="d">
 
     <Grid Background="Salmon">
-        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center">
+        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center" IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:SportsDayViewModel">
-                    <Button Name="MyFlyoutButton">
+                    <!--<Button Name="MyFlyoutButton">-->
                         <StackPanel Orientation="Horizontal">
                             <StackPanel VerticalAlignment="Center" Orientation="Vertical">
                                 <Image Name="ResultImage" Width="600" Height="400" HorizontalAlignment="Center" Grid.Column="0" >
@@ -22,11 +22,11 @@
                                 </Image>
                                 <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="630"/>
                                 <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="Auto"/>
-                                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="630" Height="Auto"/>
+                                <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="Wrap" Width="630" Height="100"/>
                             </StackPanel>
                         </StackPanel>
 
-                        <Button.Flyout>
+                        <!--<Button.Flyout>
                             <Flyout x:Name="MyFlyout">
                                 <StackPanel Margin="20,20,20,20">
                                     <TextBlock Text="URL:" FontSize="16" FontWeight="Bold"/>
@@ -34,8 +34,8 @@
                                     <Button Name="InnerFlyoutButton" HorizontalAlignment="Left" Content ="Close" Click="InnerFlyoutButton_Click"/>
                                 </StackPanel>
                             </Flyout>
-                        </Button.Flyout>
-                    </Button>
+                        </Button.Flyout>-->
+                    <!--</Button>-->
 
                 </DataTemplate>
             </GridView.ItemTemplate>
