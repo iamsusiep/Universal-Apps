@@ -36,7 +36,7 @@ namespace IndependentProject
         public async Task<SportsRootObject> GetSportsArticles()
         {
             HttpClient httpClient = new HttpClient();
-            string apiUrl = $"https://newsapi.org/v1/articles?source=talksport&sortBy=top&apiKey={apiKey}";
+            string apiUrl = $"https://newsapi.org/v1/articles?source=talksport&sortBy=latest&apiKey={apiKey}";
             string responseString = await httpClient.GetStringAsync(apiUrl);
             SportsRootObject sportsarticles = JsonConvert.DeserializeObject<SportsRootObject>(responseString);
             return sportsarticles;

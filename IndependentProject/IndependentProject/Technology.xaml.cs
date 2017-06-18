@@ -119,5 +119,16 @@ namespace IndependentProject
             await MoreTechNews();
             More.Visibility = Visibility.Collapsed;
         }
+
+        private async void GridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            string x = "URL: \n" + ((TechViewDayModel)e.ClickedItem).url;
+            var dialog = new Windows.UI.Popups.MessageDialog(x);
+            dialog.Commands.Add(new Windows.UI.Popups.UICommand("Close") { Id = 0 });
+            dialog.CancelCommandIndex = 0;
+
+            var result = await dialog.ShowAsync();
+            var btn = sender as Button;
+        }
     }
 }

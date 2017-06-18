@@ -10,8 +10,8 @@
 
     <Grid Background="Peru">
 
-        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center">
-            <GridView.ItemTemplate>
+        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center" IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
+            <GridView.ItemTemplate >
                 <DataTemplate x:DataType="data:TechViewDayModel">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel VerticalAlignment="Center" Orientation="Vertical">
@@ -22,7 +22,7 @@
                             </Image>
                             <TextBlock Name="TitleTextBlock" Text="{x:Bind title, Mode=OneWay}" FontSize="25"  HorizontalAlignment="Center" TextWrapping="Wrap" Height="Auto" Width="500"/>
                             <TextBlock Name="AuthorTextBlock" Text="{x:Bind author, Mode=OneWay}" FontSize="20"  HorizontalAlignment="Center" TextWrapping="Wrap" Width="500" Height="Auto"/>
-                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="500" Height="Auto"/>
+                            <TextBlock Name="DescriptionTextBlock" Text="{x:Bind description, Mode=OneWay}" FontSize="12" HorizontalAlignment="Center" TextWrapping="WrapWholeWords" Width="500" Height="100"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>

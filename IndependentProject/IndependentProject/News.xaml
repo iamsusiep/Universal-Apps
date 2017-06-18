@@ -8,7 +8,7 @@
     xmlns:data="using:IndependentProject.ViewModels"
     mc:Ignorable="d">
     <Grid Background="Black">
-        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center">
+        <GridView ItemsSource="{x:Bind ViewModel.News}" HorizontalAlignment="Center" IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
             <GridView.ItemTemplate>
                 <DataTemplate x:DataType="data:NewsDayViewModel">
                     <StackPanel Orientation="Horizontal">
