@@ -9,7 +9,12 @@ using Newtonsoft.Json;
 using static IndependentProject.Models.Conditions;
 using static IndependentProject.Models.TechArticles;
 using static IndependentProject.Models.SportsArticles;
+/*
+ * TalkSport API: https://newsapi.org/talksport-api (Latest Headlines: https://newsapi.org/v1/articles?source=talksport&sortBy=latest&apiKey=f3d8be790a344fffb4e4d640244046a1 )
+The Verge API: https://newsapi.org/the-verge-api (Latest Headline: https://newsapi.org/v1/articles?source=the-verge&sortBy=latest&apiKey=f3d8be790a344fffb4e4d640244046a1 )
+The Wall Street Journal API: https://newsapi.org/the-wall-street-journal-api (Live Response: https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=f3d8be790a344fffb4e4d640244046a1 )
 
+*/
 namespace IndependentProject
 {
     class NewsRetriever

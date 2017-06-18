@@ -18,6 +18,7 @@ using Windows.UI.Xaml.Navigation;
 using static IndependentProject.Models.Conditions;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
+// Website reference for message dialog: https://reflectionit.nl/blog/2015/windows-10-xaml-tips-messagedialog-and-contentdialog 
 
 namespace IndependentProject
 {

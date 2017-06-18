@@ -24,7 +24,10 @@ namespace IndependentProject
     {
         public MainPage()
         {
+
             this.InitializeComponent();
+            BackButton.Visibility = Visibility.Collapsed;
+
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
@@ -34,26 +37,31 @@ namespace IndependentProject
 
         private void IconsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            BackButton.Visibility = Visibility.Collapsed;
+
             if (SportsListBoxItem.IsSelected)
             {
-                //BackButton.Visibility = Visibility.Visible;
 
                 frame.Navigate(typeof(Sports));
                 Title.Text = "Sports";
+                BackButton.Visibility = Visibility.Visible;
+
             }
 
             if (TechListBoxItem.IsSelected)
             {
-                BackButton.Visibility = Visibility.Visible;
                 frame.Navigate(typeof(Technology));
                 Title.Text = "Technology";
+                BackButton.Visibility = Visibility.Visible;
+
             }
             if (NewsListBoxItem.IsSelected)
             {
-                BackButton.Visibility = Visibility.Visible;
 
                 frame.Navigate(typeof(News));
                 Title.Text = "Business";
+                BackButton.Visibility = Visibility.Visible;
+
             }
 
         }
@@ -61,11 +69,17 @@ namespace IndependentProject
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             BackButton.Visibility = Visibility.Collapsed;
-           
+
             if (frame.CanGoBack)
-           {
-              frame.GoBack();
-           }
+            {
+                frame.GoBack();
+                Title.Text = "";
+            }
+            else
+            {
+                frame.Navigate(typeof(MainPageFrame));
+                Title.Text = "News";
+            }
           
         }
     }
