@@ -70,7 +70,7 @@ namespace IndependentProject
             }
 
         }
-        /*https://stackoverflow.com/questions/31002778/how-to-get-info-about-previous-page-on-frame-goback/*/
+        /* https://stackoverflow.com/questions/31002778/how-to-get-info-about-previous-page-on-frame-goback/ */
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             BackButton.Visibility = Visibility.Collapsed;
@@ -78,18 +78,18 @@ namespace IndependentProject
             if (frame.CanGoBack)
             {
 
-                var lastPage = frame.BackStack.LastOrDefault();
+                var recent = frame.BackStack.LastOrDefault();
                 frame.GoBack();
 
-                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(Sports)))
+                if (recent != null && recent.SourcePageType.Equals(typeof(Sports)))
                 {
                     Title.Text = "Sports";
                 }
-                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(Technology)))
+                if (recent != null && recent.SourcePageType.Equals(typeof(Technology)))
                 {
                     Title.Text = "Technology";
                 }
-                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(News)))
+                if (recent != null && recent.SourcePageType.Equals(typeof(News)))
                 {
                     Title.Text = "Business";
                 }
