@@ -70,7 +70,7 @@ namespace IndependentProject
             }
 
         }
-        /* https://stackoverflow.com/questions/31002778/how-to-get-info-about-previous-page-on-frame-goback/ */
+        /* referred to: https://stackoverflow.com/questions/31002778/how-to-get-info-about-previous-page-on-frame-goback/ */
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             BackButton.Visibility = Visibility.Collapsed;
