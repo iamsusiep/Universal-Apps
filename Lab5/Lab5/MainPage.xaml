@@ -9,32 +9,49 @@
 
     <Grid Background="Black" >
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height ="5*"/>
+           
+
         </Grid.RowDefinitions>
-        <StackPanel Orientation ="Horizontal" Grid.Row="0">
-            <Button x:Name="button" Grid.Row="0" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <RelativePanel VerticalAlignment="Center" Margin="0,55">
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            
+        </Grid.ColumnDefinitions>
+            
+        <Button x:Name="button" Grid.Row="0" Grid.Column="0" Click="button_click">
+            <StackPanel Orientation="Horizontal">
                 <Image x:Name ="DonutI" Source ="Assets/donut.png" Stretch="None" />
-                <TextBox x:Name ="Donuts" Text="Donuts" RelativePanel.AlignRightWith ="DonutI"  Margin="50,0,0,0" Foreground="White"/>
-            </RelativePanel>
-            <Button x:Name="button1" Grid.Row="0"  Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <RelativePanel VerticalAlignment="Center" Margin="0,55">
+                <TextBlock x:Name ="Donuts" Text="Donuts" RelativePanel.AlignRightWith ="DonutI" FontSize="30"  Margin="50,0,0,0" Foreground="White"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button1" Grid.Row="0" Grid.Column="1" Click="button1_click">
+            <StackPanel Orientation="Horizontal">
                 <Image x:Name ="Coffee" Source ="Assets/coffee.png" Stretch="None"/>
-                <TextBox x:Name ="Coffees" Text="Donuts" RelativePanel.AlignRightWith ="Coffee"  Margin="50,0,0,0" Foreground="White"/>
-            </RelativePanel>
-            <Button x:Name="button2" Grid.Row="0" Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <RelativePanel VerticalAlignment="Center">
-                <Image x:Name ="Schedule" Source ="Assets/clock.png" Stretch="None"/>
-                <TextBox x:Name ="Schedules" Text="Schedule" RelativePanel.AlignRightWith="Schedule" Margin="50,0,0,0"/>
-            </RelativePanel>
-            <Button x:Name="button3" Grid.Row="0"  Content="Button" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-            <RelativePanel VerticalAlignment="Center">
-                <Image x:Name ="Complete"  Source ="Assets/clock.png" Stretch="None"/>
-                <TextBox x:Name ="completes" Text="Complete" RelativePanel.AlignRightWith="Complete" Margin="50,0,0,0"/>
-            </RelativePanel>
-        </StackPanel>
+                <TextBlock x:Name ="Coffees" Text="Coffee" RelativePanel.AlignRightWith ="Coffee"  Margin="50,0,0,0" FontSize="30" Foreground="White"/>
+            </StackPanel>
+        </Button>
         
-        <Frame Name ="frame" Grid.Row="1"/>
+        <Button x:Name="button2" Grid.Row="0" Grid.Column="2" Click="button2_click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name ="Schedule" Source ="Assets/clock.png" Stretch="None"/>
+                <TextBlock x:Name ="Schedules" Text="Schedule" RelativePanel.AlignRightWith="Schedule" FontSize="30" Foreground="White" Margin="50,0,0,0"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="button3" Grid.Row="0" Grid.Column="3" Click="button3_click">
+            <StackPanel Orientation="Horizontal">
+                <Image x:Name ="Complete"  Source ="Assets/clock.png" Stretch="None"/>
+                <TextBlock x:Name ="completes" Text="Complete" Foreground="White" FontSize="30" RelativePanel.AlignRightWith="Complete" Margin="50,0,0,0"/>
+            </StackPanel>
+        </Button>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Frame x:Name="frame" />
+            <Image Source="Assets/donuts.jpg" Width="500" Stretch="None"/>
+        </StackPanel>
     </Grid>
 </Page>

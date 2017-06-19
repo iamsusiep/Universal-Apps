@@ -27,14 +27,5 @@ namespace Lab5
             this.InitializeComponent();
         }
 
-        private void order_TextChanged(System.Object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void order_TextChanged(System.Object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }
