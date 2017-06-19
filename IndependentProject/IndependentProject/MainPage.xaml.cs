@@ -30,6 +30,11 @@ namespace IndependentProject
 
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+             
+        }
+
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
@@ -65,7 +70,7 @@ namespace IndependentProject
             }
 
         }
-
+        /*https://stackoverflow.com/questions/31002778/how-to-get-info-about-previous-page-on-frame-goback/*/
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             BackButton.Visibility = Visibility.Collapsed;
@@ -73,7 +78,20 @@ namespace IndependentProject
             if (frame.CanGoBack)
             {
                 frame.GoBack();
-                Title.Text = "";
+                var lastPage = frame.ForwardStack.LastOrDefault();
+                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(Sports)))
+                {
+                    Title.Text = "Sports";
+                }
+                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(Technology)))
+                {
+                    Title.Text = "Technology";
+                }
+                if (lastPage != null && lastPage.SourcePageType.Equals(typeof(News)))
+                {
+                    Title.Text = "Business";
+                }
+
             }
             else
             {
