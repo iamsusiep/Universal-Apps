@@ -77,8 +77,10 @@ namespace IndependentProject
 
             if (frame.CanGoBack)
             {
+
+                var lastPage = frame.BackStack.LastOrDefault();
                 frame.GoBack();
-                var lastPage = frame.ForwardStack.LastOrDefault();
+
                 if (lastPage != null && lastPage.SourcePageType.Equals(typeof(Sports)))
                 {
                     Title.Text = "Sports";
