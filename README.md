@@ -1,7 +1,7 @@
 # XAML Independent Project
 ## Description ##
 
-Labs 1-6: experimental apps to explore using the widgets(button, DatePicker, TimePicker, ScrollViewer, hamburger menu), SplitView, StackPanel, data binding, Weather Underground API 
+Labs 1-6: experimental apps to explore using the widgets(button, DatePicker, TimePicker, ScrollViewer, hamburger menu), SplitView, StackPanel, data binding, Weather Underground API <br />
 IndependentProject: Utilized APIs of three different news media to display current news. Incorporated widgets and data binding. 
 ## Preview ##
 ![main](https://user-images.githubusercontent.com/21698734/34460786-a05316d8-edcd-11e7-998f-8e8c64fb587c.JPG)
